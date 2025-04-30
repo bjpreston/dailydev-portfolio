@@ -11,6 +11,7 @@ type Project = {
   id: number;
   name: string;
   url: string;
+  description: string;
 };
 
 function App() {
@@ -35,6 +36,7 @@ function App() {
                 {projects.map((proj) => (
                   <li key={proj.id}>
                     <Link to={`/projects/${proj.id}`}>{proj.name}</Link>
+                    <p>{proj.description}</p>
                   </li>
                 ))}
               </ul>
