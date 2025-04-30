@@ -1,24 +1,36 @@
-# Logs
-logs
-*.log
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-pnpm-debug.log*
-lerna-debug.log*
+# Node
+node_modules/
 
-node_modules
-dist
-dist-ssr
+# Builds
+dist/
+build/
+client/dist/
+server/dist/
+
+# Logs
+logs/
+*.log
+
+# Environment files
+.env
+.env.local
 *.local
 
-# Editor directories and files
-.vscode/*
-!.vscode/extensions.json
-.idea
+# OS + Editor junk
 .DS_Store
+*.swp
+.idea/
+.vscode/
+
+# Optional VSCode exceptions (allowing only specific settings)
+!.vscode/extensions.json
+
+# Accidental SSH artifacts
+eval "$(ssh-agent -s)"
+eval "$(ssh-agent -s)".pub
+
+# Windows/IDE files (safe even if you're on macOS)
 *.suo
 *.ntvs*
 *.njsproj
 *.sln
-*.sw?

@@ -4,6 +4,7 @@ type Project = {
   id: number;
   name: string;
   url: string;
+  description: string;
 };
 
 export default function ProjectDetail({ projects }: { projects: Project[] }) {
@@ -14,6 +15,7 @@ export default function ProjectDetail({ projects }: { projects: Project[] }) {
   return (
     <div style={{ padding: '2rem' }}>
       <h2>{project.name}</h2>
+      <p>{project.description}</p>
       <p>Internal page for project #{project.id}.</p>
       <p>
         Optional external link:{' '}
